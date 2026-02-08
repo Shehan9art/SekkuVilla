@@ -1,0 +1,264 @@
+/* App.css */
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary: #f6e0b5;
+  --background-light: #FAF9F6;
+  --background-dark: #211c11;
+  --text-primary-light: #333333;
+  --text-secondary-light: #666666;
+  --text-primary-dark: #EAEAEA;
+  --text-secondary-dark: #A0A0A0;
+  --border-light: #EAE6DA;
+  --border-dark: #444037;
+}
+
+.dark {
+  --bg: var(--background-dark);
+  --text: var(--text-primary-dark);
+  --text-secondary: var(--text-secondary-dark);
+  --border: var(--border-dark);
+}
+
+.light {
+  --bg: var(--background-light);
+  --text: var(--text-primary-light);
+  --text-secondary: var(--text-secondary-light);
+  --border: var(--border-light);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Manrope', sans-serif;
+  background-color: var(--bg);
+  color: var(--text);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.font-heading {
+  font-family: 'Lemon Milk', 'FF Spoken Trial', sans-serif;
+}
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.dark ::-webkit-scrollbar-track {
+  background: #2a2a2a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primary);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #e0c799;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in {
+  animation: fadeIn 0.6s ease-out;
+}
+
+/* Custom Components */
+.qr-btn {
+  background: linear-gradient(90deg, #cfa66f, #f6e0b5);
+  color: #000;
+  border-radius: 12px;
+  padding: 12px 24px;
+  font-weight: 600;
+  transition: transform 0.3s ease;
+}
+
+.qr-btn:hover {
+  transform: translateY(-2px);
+}
+
+.admin-btn {
+  background: #fff;
+  border-radius: 12px;
+  padding: 12px 24px;
+  border: 1px solid #eee;
+  font-weight: 600;
+}
+
+/* Card Styles */
+.card {
+  @apply bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm border border-gray-200/50 dark:border-gray-700/50 rounded-2xl p-6 transition-all duration-300;
+}
+
+.card:hover {
+  @apply transform -translate-y-2 shadow-2xl border-primary/20;
+}
+
+/* Button Styles */
+.btn-primary {
+  @apply bg-primary text-text-primary-light dark:text-text-primary-dark px-6 py-3 rounded-xl font-semibold hover:bg-primary/80 transition-all hover:scale-105 active:scale-95;
+}
+
+/* Navigation Styles */
+.main-nav-link {
+  @apply relative transition-all duration-300;
+}
+
+.main-nav-link.active::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 30px;
+  height: 3px;
+  background-color: var(--primary);
+  border-radius: 2px;
+}
+
+/* Responsive Container */
+.container {
+  @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+}
+
+/* Grid Patterns */
+.grid-pattern {
+  background-image: 
+    radial-gradient(circle at 25px 25px, rgba(192, 143, 80, 0.1) 2px, transparent 2px);
+  background-size: 50px 50px;
+}
+
+/* Loading Animation */
+.loading-spinner {
+  border: 3px solid rgba(246, 224, 181, 0.3);
+  border-radius: 50%;
+  border-top: 3px solid var(--primary);
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Section Spacing */
+.section-padding {
+  @apply py-16 md:py-24;
+}
+
+/* Hero Gradient */
+.hero-gradient {
+  background: linear-gradient(135deg, rgba(246, 224, 181, 0.1) 0%, rgba(192, 143, 80, 0.05) 100%);
+}
+
+/* Glass Effect */
+.glass-effect {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+}
+
+.dark .glass-effect {
+  background: rgba(33, 28, 17, 0.8);
+}
+
+/* Glass Card */
+.glass-card {
+  background: var(--glass-bg);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid var(--glass-border);
+  border-radius: 1rem;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.1);
+}
+
+/* Water Reflection */
+.water-reflection {
+  position: relative;
+  overflow: hidden;
+}
+
+.water-reflection::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    180deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.1) 50%,
+    transparent 100%
+  );
+  animation: waterShimmer 3s infinite linear;
+}
+
+@keyframes waterShimmer {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(100%);
+  }
+}
+
+/* Pool Wave */
+.pool-wave {
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(14, 165, 233, 0.1) 25%,
+    rgba(56, 189, 248, 0.2) 50%,
+    rgba(14, 165, 233, 0.1) 75%,
+    transparent 100%
+  );
+  animation: waveMove 8s infinite linear;
+}
+
+@keyframes waveMove {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+/* Leaf Background */
+.leaf-bg {
+  background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%230f766e' fill-opacity='0.03' fill-rule='evenodd'/%3E%3C/svg%3E");
+}
+
+/* Fade In Animation */
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 0.6s ease-out forwards;
+}
