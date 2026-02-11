@@ -3,7 +3,7 @@ import React from 'react';
 const About = () => {
   const features = [
     { icon: 'architecture', title: 'Traditional Design', description: 'Authentic Sri Lankan architecture with natural materials' },
-    { icon: 'water', title: 'Poolside Living', description: 'Private infinity pool with panoramic views' },
+    { icon: 'water', title: 'Poolside Living', description: 'Private swim pool with panoramic views' },
     { icon: 'spa', title: 'Wellness Focus', description: 'Designed for relaxation and rejuvenation' },
     { icon: 'eco', title: 'Sustainable', description: 'Eco-friendly practices and solar power' },
     { icon: 'landscape', title: 'Natural Setting', description: 'Surrounded by lush gardens and water features' },
@@ -70,7 +70,7 @@ const About = () => {
                     <span className="material-symbols-outlined text-8xl text-emerald-600 opacity-50">
                       water_full
                     </span>
-                    <div className="mt-4 text-xl font-semibold text-emerald-700">Infinity Pool View</div>
+                    <div className="mt-4 text-xl font-semibold text-emerald-700">Swim Pool View</div>
                   </div>
                 </div>
               </div>
