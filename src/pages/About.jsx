@@ -143,47 +143,7 @@ const About = () => {
                   "I believe in creating unforgettable experiences that connect people with nature 
                   and Sri Lankan culture."
                 </p>
-              </div>
-            </div>
-          </div>
-
-          {/* Sustainability */}
-          <div className="glass-card p-8 fade-in">
-            <h2 className="text-3xl font-bold mb-8 text-center text-gray-800 dark:text-white">
-              Our Sustainability Promise
-            </h2>
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-              <div className="text-center p-6">
-                <div className="w-16 h-16 bg-gradient-to-br from-emerald-500/20 to-teal-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="material-symbols-outlined text-2xl text-emerald-600">solar_power</span>
-                </div>
-                <h3 className="font-bold mb-2 text-gray-800 dark:text-white">Solar Power</h3>
-                <p className="text-sm text-gray-600 dark:text-gray-300">Renewable energy for all operations</p>
-              </div>
-              
-              <div className="text-center p-6">
-                <div className="w-16 h-16 bg-gradient-to-br from-emerald-500/20 to-teal-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="material-symbols-outlined text-2xl text-emerald-600">water_drop</span>
-                </div>
-                <h3 className="font-bold mb-2 text-gray-800 dark:text-white">Water Conservation</h3>
-                <p className="text-sm text-gray-600 dark:text-gray-300">Rainwater harvesting system</p>
-              </div>
-              
-              <div className="text-center p-6">
-                <div className="w-16 h-16 bg-gradient-to-br from-emerald-500/20 to-teal-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="material-symbols-outlined text-2xl text-emerald-600">restaurant</span>
-                </div>
-                <h3 className="font-bold mb-2 text-gray-800 dark:text-white">Local Produce</h3>
-                <p className="text-sm text-gray-600 dark:text-gray-300">Organic ingredients from local farms</p>
-              </div>
-              
-              <div className="text-center p-6">
-                <div className="w-16 h-16 bg-gradient-to-br from-emerald-500/20 to-teal-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="material-symbols-outlined text-2xl text-emerald-600">recycling</span>
-                </div>
-                <h3 className="font-bold mb-2 text-gray-800 dark:text-white">Zero Waste</h3>
-                <p className="text-sm text-gray-600 dark:text-gray-300">Comprehensive recycling program</p>
-              </div>
+              </div>    
             </div>
           </div>
         </div>
