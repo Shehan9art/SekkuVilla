@@ -18,7 +18,7 @@ const Welcome = () => {
               Welcome to Sekku Villa
             </h1>
             <p className="text-xl md:text-2xl text-gray-600 dark:text-gray-300 mb-10 leading-relaxed">
-              A luxury poolside retreat where traditional Sri Lankan charm meets contemporary glass elegance
+              A private heritage walawwa estate in Kotugoda, surrounded by open gardens, a traditional oil mill, and peaceful outdoor living.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a 
@@ -76,11 +76,11 @@ const Welcome = () => {
               
               <div className="glass-card text-center p-8 hover:shadow-2xl transition-all duration-300">
                 <div className="w-20 h-20 bg-gradient-to-br from-emerald-500/20 to-teal-500/20 rounded-full flex items-center justify-center mx-auto mb-6 water-reflection">
-                  <span className="material-symbols-outlined text-3xl text-emerald-600">eco</span>
+                  <span className="material-symbols-outlined text-3xl text-emerald-600">celebration</span>
                 </div>
-                <h3 className="text-2xl font-bold mb-3 text-gray-800 dark:text-white">Eco-Luxury</h3>
+                <h3 className="text-2xl font-bold mb-3 text-gray-800 dark:text-white">Private Bar Lounge</h3>
                 <p className="text-gray-600 dark:text-gray-300">
-                  Sustainable luxury with minimal environmental impact
+                  Outdoor private bar — perfect for relaxed evenings and intimate gatherings
                 </p>
               </div>
             </div>
