@@ -37,13 +37,16 @@ const About = () => {
                   Welcome to Sekku Villa
                 </h2>
                 <p className="text-gray-600 dark:text-gray-300 mb-4 leading-relaxed">
-                  Sekku Villa is a luxurious poolside retreat that harmoniously blends traditional 
-                  Sri Lankan architecture with contemporary glass design. Our villa offers an 
-                  immersive experience where you can reconnect with nature while enjoying modern comforts.
+                  Sekku Villa is a private heritage walawwa in Kotugoda, offering space, serenity, and authentic Sri Lankan charm.
+                </p>
+                <p className="text-gray-600 dark:text-gray-300 mb-4 leading-relaxed">
+                  Set within expansive gardens, the villa features a swimming pool, running path, outdoor leisure areas, and a private bar setup, blending countryside character with modern comfort.
+                </p>
+                <p className="text-gray-600 dark:text-gray-300 mb-4 leading-relaxed">
+                  At its heart stands the traditional oil mill, the “Sekku,” a proud reminder of the estate’s cultural roots.
                 </p>
                 <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
-                  The name "Sekku" represents the traditional oil mill, symbolizing our commitment to 
-                  preserving cultural heritage while creating sustainable, memorable experiences.
+                  Sekku Villa is more than a stay, it’s relaxed private living in a timeless setting.
                 </p>
               </div>
               
