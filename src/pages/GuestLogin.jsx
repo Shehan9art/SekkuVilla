@@ -124,9 +124,9 @@ const GuestLogin = () => {
                   Remember me
                 </label>
               </div>
-              <a href="#" className="text-sm font-medium text-emerald-600 hover:text-emerald-500">
+              <button onClick={() => alert('Forgot Password functionality coming soon!')} className="text-sm font-medium text-emerald-600 hover:text-emerald-500">
                 Forgot Password?
-              </a>
+              </button>
             </div>
 
             <button
@@ -181,7 +181,7 @@ const GuestLogin = () => {
           {/* Admin Login */}
           <div className="mt-8 text-center fade-in" style={{ animationDelay: '0.5s' }}>
             <a 
-              href="#" 
+              href="/admin" 
               className="inline-flex items-center px-6 py-3 glass-effect text-gray-700 dark:text-white rounded-xl font-semibold hover:shadow-lg transition-all duration-300"
             >
               <span className="material-symbols-outlined mr-2">admin_panel_settings</span>
