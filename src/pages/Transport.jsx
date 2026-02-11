@@ -8,9 +8,9 @@ const transportOptions = [
     description: 'Local buses for short-distance travel',
     distance: '1.4 km',
     locations: [
-      { name: 'Thapalpettiya bus stop', coordinates: '7.124742974239229, 79.94327522811056' },
-      { name: 'Mabima Bus Stop', coordinates: '7.104113912572657, 79.93827297601158' },
-      { name: 'Ja Ela Bus Stand', coordinates: '7.078321144798728, 79.89047299888135' }
+      { name: 'Thapalpettiya bus stop', link: 'https://maps.app.goo.gl/zzC8JAXvixZkqjpN7' },
+      { name: 'Mabima Bus Stop', link: 'https://maps.app.goo.gl/uxSTW6tSLT79SP3XA' },
+      { name: 'Ja Ela Bus Stand', link: 'https://maps.app.goo.gl/rwcJwvqVMT993NxG9' }
     ]
   },
   {
@@ -19,8 +19,8 @@ const transportOptions = [
     description: 'Express services to major cities',
     distance: '9 km',
     locations: [
-      { name: 'Gampaha Bus Stand', coordinates: '7.093690839527676, 79.99160880194243' },
-      { name: 'Seeduwa Junction, Negombo', coordinates: '7.1327006934304, 79.87604281088808' }
+      { name: 'Gampaha Bus Stand', link: 'https://maps.app.goo.gl/Gmk1Aj4Ju73AymGR7' },
+      { name: 'Seeduwa Junction, Negombo', link: 'https://maps.app.goo.gl/qzz6rv7kJiBSKA3e8' }
     ]
   },
   {
@@ -29,8 +29,8 @@ const transportOptions = [
     description: 'Scenic routes via coastal railway',
     distance: '8-10 km',
     locations: [
-      { name: 'Gampaha Railway station', coordinates: '7.0936742534884045, 79.99374032529948' },
-      { name: 'Seeduwa', coordinates: '7.129439877368906, 79.88249958324829' }
+      { name: 'Gampaha Railway station', link: 'https://maps.app.goo.gl/8MN7aVU4RAxAwiGz8' },
+      { name: 'Seeduwa', link: 'https://maps.app.goo.gl/qKv6EC15A4CqwRTg8' }
     ]
   },
   {
@@ -39,8 +39,8 @@ const transportOptions = [
     description: 'International and domestic connections',
     distance: '11.7-13 km',
     locations: [
-      { name: 'Bandaranaike Airport (BIA)', coordinates: '7.18075745580079, 79.88434666488313' },
-      { name: 'Cinnamon Air Domestic Terminal', coordinates: '7.182559679939885, 79.88857516332554' }
+      { name: 'Bandaranaike Airport (BIA)', link: 'https://www.google.com/maps?q=7.18075745580079,79.88434666488313' },
+      { name: 'Cinnamon Air Domestic Terminal', link: 'https://www.google.com/maps?q=7.182559679939885,79.88857516332554' }
     ]
   },
   {
@@ -49,7 +49,7 @@ const transportOptions = [
     description: 'Nearby harbours for sea excursions',
     distance: '35 km',
     locations: [
-      { name: 'Colombo Harbour', coordinates: '6.9625012334005305, 79.8489337811541' }
+      { name: 'Colombo Harbour', link: 'https://maps.app.goo.gl/9U8JLjAzqeoZvBgA9' }
     ]
   },
   {
@@ -58,7 +58,7 @@ const transportOptions = [
     description: 'Breathtaking aerial island views',
     distance: '13 km',
     locations: [
-      { name: 'Cinnamon Air Domestic Terminal', coordinates: '7.182559679939885, 79.88857516332554' }
+      { name: 'Cinnamon Air Domestic Terminal', link: 'https://maps.app.goo.gl/R74hyhUUdJczXyy58' }
     ]
   },
   {
@@ -67,15 +67,14 @@ const transportOptions = [
     description: 'Easy access to major highways',
     distance: '10 km',
     locations: [
-      { name: 'Ja ela Highway Access', coordinates: '7.081939697756434, 79.87764899007394' }
+      { name: 'Ja ela Highway Access', link: 'https://maps.app.goo.gl/Xc3PD5fsSkG7sdLW6' }
     ]
   }
 ];
 
 const Transport = () => {
-  const openInMaps = (coordinates) => {
-    const [lat, lng] = coordinates.split(',').map(coord => coord.trim());
-    window.open(`https://www.google.com/maps?q=${lat},${lng}`, '_blank');
+  const openInMaps = (link) => {
+    window.open(link, '_blank');
   };
 
   return (
@@ -159,14 +158,14 @@ const Transport = () => {
                 </div>
 
                 <div className="mt-4 pt-4 border-t border-gray-200/50 dark:border-gray-700/50">
-                  <div className="text-xs text-gray-500 mb-2">Locations:</div>
+                  <div className="text-xs text-gray-500 dark:text-gray-400 mb-2">Locations:</div>
                   <div className="space-y-2">
                     {option.locations.slice(0, 2).map((location, idx) => (
                       <div key={idx} className="flex justify-between items-center p-2 bg-white/30 dark:bg-gray-800/30 rounded-lg">
-                        <span className="text-sm truncate">{location.name}</span>
+                        <span className="text-sm text-gray-800 dark:text-gray-200 truncate">{location.name}</span>
                         <button
-                          onClick={() => openInMaps(location.coordinates)}
-                          className="text-xs text-emerald-600 hover:text-emerald-700"
+                          onClick={() => openInMaps(location.link)}
+                          className="text-xs text-emerald-600 dark:text-emerald-400 hover:text-emerald-700 dark:hover:text-emerald-300"
                         >
                           Map →
                         </button>
@@ -176,7 +175,7 @@ const Transport = () => {
                 </div>
 
                 <button
-                  onClick={() => option.locations[0] && openInMaps(option.locations[0].coordinates)}
+                  onClick={() => option.locations[0] && openInMaps(option.locations[0].link)}
                   className="w-full mt-4 px-4 py-2 bg-gradient-to-r from-emerald-500 to-teal-500 text-white rounded-xl font-semibold hover:shadow-lg hover:scale-105 transition-transform"
                 >
                   Get Directions
@@ -217,21 +216,21 @@ const Transport = () => {
                 <div className="flex justify-between items-center p-4 bg-white/50 dark:bg-gray-800/50 rounded-xl">
                   <div>
                     <div className="font-semibold text-gray-800 dark:text-white">Bandaranaike Airport (BIA)</div>
-                    <div className="text-sm text-gray-500">CMB - Colombo</div>
+                    <div className="text-sm text-gray-500 dark:text-gray-400">CMB - Colombo</div>
                   </div>
                   <div className="text-right">
-                    <div className="font-bold text-emerald-600">30 mins</div>
-                    <div className="text-sm text-gray-500">from villa</div>
+                    <div className="font-bold text-emerald-600 dark:text-emerald-400">30 mins</div>
+                    <div className="text-sm text-gray-500 dark:text-gray-400">from villa</div>
                   </div>
                 </div>
                 <div className="flex justify-between items-center p-4 bg-white/50 dark:bg-gray-800/50 rounded-xl">
                   <div>
                     <div className="font-semibold text-gray-800 dark:text-white">Ratmalana Airport</div>
-                    <div className="text-sm text-gray-500">RML - Colombo</div>
+                    <div className="text-sm text-gray-500 dark:text-gray-400">RML - Colombo</div>
                   </div>
                   <div className="text-right">
-                    <div className="font-bold text-emerald-600">45 mins</div>
-                    <div className="text-sm text-gray-500">from villa</div>
+                    <div className="font-bold text-emerald-600 dark:text-emerald-400">45 mins</div>
+                    <div className="text-sm text-gray-500 dark:text-gray-400">from villa</div>
                   </div>
                 </div>
               </div>

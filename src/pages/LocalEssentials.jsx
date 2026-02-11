@@ -201,7 +201,7 @@ const LocalEssentials = () => {
                   ))}
                 </div>
 
-                <div className="text-xs text-gray-500 mb-3">
+                <div className="text-xs text-gray-500 dark:text-gray-400 mb-3">
                   Nearby locations:
                 </div>
                 <div className="space-y-2 mb-4">
@@ -210,10 +210,10 @@ const LocalEssentials = () => {
                       key={idx}
                       className="flex items-center justify-between p-2 bg-white/30 dark:bg-gray-800/30 rounded-lg"
                     >
-                      <span className="text-sm truncate">{location.name}</span>
+                      <span className="text-sm text-gray-800 dark:text-gray-200 truncate">{location.name}</span>
                       <button
                         onClick={() => openInMaps(location.coordinates)}
-                        className="text-xs text-emerald-600 hover:text-emerald-700"
+                        className="text-xs text-emerald-600 dark:text-emerald-400 hover:text-emerald-700 dark:hover:text-emerald-300"
                       >
                         Map →
                       </button>

@@ -58,10 +58,10 @@ const Header = ({ toggleDarkMode, isDarkMode }) => {
             </Link>
             <button
               onClick={toggleDarkMode}
-              className="ml-2 p-3 rounded-xl bg-white/50 dark:bg-gray-800/50 text-gray-600 dark:text-gray-300 hover:bg-gray-100/70 dark:hover:bg-gray-700/70 transition-all duration-300"
+              className="ml-2 px-4 py-3 rounded-xl bg-gray-100 dark:bg-gray-700 border border-gray-200 dark:border-gray-600 text-gray-600 dark:text-gray-300 hover:shadow-lg hover:scale-105 transition-all duration-300"
             >
               {isDarkMode ? (
-                <span className="material-symbols-outlined text-yellow-500">light_mode</span>
+                <span className="material-symbols-outlined text-yellow-400">light_mode</span>
               ) : (
                 <span className="material-symbols-outlined text-indigo-600">dark_mode</span>
               )}
@@ -71,13 +71,13 @@ const Header = ({ toggleDarkMode, isDarkMode }) => {
           <div className="lg:hidden flex items-center space-x-3">
             <button
               onClick={toggleDarkMode}
-              className="p-2 rounded-lg bg-white/50 dark:bg-gray-800/50"
+              className="px-4 py-3 rounded-xl bg-gray-100 dark:bg-gray-700 border border-gray-200 dark:border-gray-600 hover:shadow-lg hover:scale-105 transition-all duration-300"
             >
               {isDarkMode ? '☀️' : '🌙'}
             </button>
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="p-2 rounded-lg bg-white/50 dark:bg-gray-800/50"
+              className="p-2 rounded-lg bg-white/50 dark:bg-gray-800/50 text-gray-800 dark:text-gray-200"
             >
               <span className="material-symbols-outlined text-2xl">
                 {isMobileMenuOpen ? 'close' : 'menu'}
