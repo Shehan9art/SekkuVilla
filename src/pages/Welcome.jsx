@@ -70,7 +70,7 @@ const Welcome = () => {
                 <div className="w-20 h-20 bg-gradient-to-br from-emerald-500/20 to-teal-500/20 rounded-full flex items-center justify-center mx-auto mb-6 water-reflection">
                   <span className="material-symbols-outlined text-3xl text-emerald-600">celebration</span>
                 </div>
-                <h3 className="text-2xl font-bold mb-3 text-gray-800 dark:text-white">Private Bar Lounge</h3>
+                <h3 className="text-2xl font-bold mb-3 text-gray-800 dark:text-white">Pick Your Sport</h3>
                 <p className="text-gray-600 dark:text-gray-300">
                   Outdoor private bar — perfect for relaxed evenings and intimate gatherings
                 </p>
