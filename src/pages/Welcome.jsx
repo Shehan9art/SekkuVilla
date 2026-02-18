@@ -27,14 +27,6 @@ const Welcome = () => {
               >
                 <span className="material-symbols-outlined mr-2">explore</span>
                 Explore Activities
-              </a>
-              <a 
-                href="#contact" 
-                className="px-8 py-4 glass-effect text-gray-700 dark:text-white rounded-xl font-bold text-lg hover:shadow-xl hover:scale-105 transition-all duration-300 flex items-center justify-center"
-              >
-                <span className="material-symbols-outlined mr-2">call</span>
-                Book Your Stay
-              </a>
             </div>
           </div>
         </div>
