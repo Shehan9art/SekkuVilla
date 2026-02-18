@@ -152,21 +152,6 @@ const Welcome = () => {
                     <div className="w-12 h-12 bg-gradient-to-br from-emerald-600 to-teal-500 rounded-xl flex items-center justify-center mr-4">
                       <span className="material-symbols-outlined text-white">person</span>
                     </div>
-                    <div>
-                      <div className="font-bold text-lg text-gray-800 dark:text-white">Nimesh Ranathunga</div>
-                      <div className="text-gray-600 dark:text-gray-300">Owner & Host</div>
-                    </div>
-                  </div>
-                  <div className="flex items-center mb-4">
-                    <div className="w-12 h-12 bg-gradient-to-br from-emerald-600 to-teal-500 rounded-xl flex items-center justify-center mr-4">
-                      <span className="material-symbols-outlined text-white">call</span>
-                    </div>
-                    <div>
-                      <div className="font-bold text-lg text-gray-800 dark:text-white">Contact Number</div>
-                      <a href="tel:+94714913226" className="text-emerald-600 dark:text-emerald-400 hover:underline text-lg">
-                        +94 71 491 3226
-                      </a>
-                    </div>
                   </div>
                 </div>
                 <p className="text-gray-600 dark:text-gray-300">
