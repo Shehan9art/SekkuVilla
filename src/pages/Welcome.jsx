@@ -87,7 +87,7 @@ const Welcome = () => {
       <section className="py-20 bg-gradient-to-br from-emerald-50/50 to-teal-50/50 dark:from-gray-900 dark:to-gray-800">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-center mb-12 bg-gradient-to-r from-emerald-700 to-teal-600 bg-clip-text text-transparent">
-            Explore Sekku Villa
+            Things To Do
           </h2>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
             <a 
@@ -137,41 +137,6 @@ const Welcome = () => {
           </div>
         </div>
       </section>
-
-      {/* Owner Contact Section */}
-      <section id="contact" className="py-20">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto glass-card p-8">
-            <div className="grid lg:grid-cols-2 gap-8 items-center">
-              <div>
-                <h2 className="text-3xl font-bold mb-6 text-gray-800 dark:text-white">
-                  Contact Owner Directly
-                </h2>
-                <div className="mb-6">
-                  <div className="flex items-center mb-4">
-                    <div className="w-12 h-12 bg-gradient-to-br from-emerald-600 to-teal-500 rounded-xl flex items-center justify-center mr-4">
-                      <span className="material-symbols-outlined text-white">person</span>
-                    </div>
-                  </div>
-                </div>
-                <p className="text-gray-600 dark:text-gray-300">
-                  For personalized service, direct bookings, and special requests, contact Nimesh directly.
-                </p>
-              </div>
-              
-              <div className="text-center">
-                <div className="inline-block p-8 bg-gradient-to-br from-emerald-400/10 to-teal-400/10 rounded-3xl mb-6">
-                  <span className="material-symbols-outlined text-6xl text-emerald-600">support_agent</span>
-                </div>
-                <p className="text-gray-600 dark:text-gray-300">
-                  Available 24/7 to ensure your perfect stay
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-    </div>
   );
 };
 
